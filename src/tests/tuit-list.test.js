@@ -27,12 +27,7 @@ test('tuit list renders static tuit array', () => {
     expect(linkElement).toBeInTheDocument();
 });
 
-test('tuit list renders async', async () => {
-    // TODO: implement this
-
-})
-
-test('tuit list renders mocked', async () => {
+test('tuit list renders mocked/async', async () => {
     // TODO: implement this
     axios.get.mockImplementation(() =>
                                      Promise.resolve({data: {tuits: MOCKED_TUITS}})
