@@ -31,7 +31,7 @@ const TuitStats = ({ tuit, likeTuit = () => {}, dislikeTuit = () => {} }) => {
         await checkLike();
         await checkDislike();
     };
-    const disikeHandler = async () => {
+    const dislikeHandler = async () => {
         await dislikeTuit(tuit);
         await checkLike();
         await checkDislike();
@@ -40,12 +40,12 @@ const TuitStats = ({ tuit, likeTuit = () => {}, dislikeTuit = () => {} }) => {
     return (
         <div className='row mt-2'>
             <div className='col'>
-                <i className='far fa-message me-1'></i>
+                <i className='far fa-message me-1'/>
                 {tuit.stats && tuit.stats.replies}
             </div>
 
             <div className='col'>
-                <i className='far fa-retweet me-1'></i>
+                <i className='far fa-retweet me-1'/>
                 {tuit.stats && tuit.stats.retuits}
             </div>
 
@@ -63,7 +63,7 @@ const TuitStats = ({ tuit, likeTuit = () => {}, dislikeTuit = () => {} }) => {
             </div>
 
             <div className='col'>
-        <span onClick={() => disikeHandler()}>
+        <span onClick={() => dislikeHandler()}>
           {isdisliked ? (
               <i
     className='fa-solid fa-thumbs-down me-1'
