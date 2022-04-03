@@ -1,9 +1,9 @@
 import axios from "axios";
-
-const TUITS_API = "https://zliu-node-on-heroku.herokuapp.com/api/tuits";
-const USERS_API = "https://zliu-node-on-heroku.herokuapp.com/api/users";
-// const TUITS_API = "http://localhost:4000/api/tuits";
-// const USERS_API = "http://localhost:4000/api/users";
+// const BASE_API = process.env.REACT_APP_BASE_URL;
+// const TUITS_API = `${BASE_API}/api/tuits`;
+// const USERS_API = `${BASE_API}/api/users`;
+const TUITS_API = "http://localhost:4000/api/tuits";
+const USERS_API = "http://localhost:4000/api/users";
 
 const api = axios.create({
                              withCredentials: true,
